@@ -2,7 +2,7 @@ const config = (function () {
     const PORT = 8000;
     const JWT_SECRET = 'xxx';
     const JWT_ISS = 'telerik';
-    const JWT_EXPIRE_TIME = 60*60*60; // in seconds
+    const JWT_EXPIRE_TIME = 30; // in seconds
 
     return {
         PORT,

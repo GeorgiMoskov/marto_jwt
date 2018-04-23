@@ -12,7 +12,7 @@ const create = function (users) {
 
         return function (req, res) {
             console.log('loginnnn');
-            //tursin user sus sushtiq e-mail kato v req-sta
+            //tursim user sus sushtiq e-mail kato v req-sta
             let userFound = users.find(x => x.email == req.body.email);
             console.log(userFound);
             if (userFound) {
@@ -25,7 +25,6 @@ const create = function (users) {
                         let payload = {
                             sub: userFound.id,
                             email: userFound.email,
-                            password: userFound.password,
                             exp: expire,
                             iss: config.JWT_ISS
                         }
